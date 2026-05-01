@@ -1,75 +1,134 @@
 /* ============================================================
-   style.css  –  Estilos personalizados del sistema
+   style.css – Estilos personalizados (Identidad SENATI)
    ============================================================ */
 
 /* ── Fuente base ────────────────────────────────────────── */
 body {
     font-family: 'Nunito', sans-serif;
+    background-color: #f4f7f6; /* Un gris muy suave para que las cards resalten */
 }
 
-/* ── Sidebar: color de acento SENATI ─────────────────────── */
+/* ── Sidebar: color de acento SENATI (MANTENIDO) ─────────── */
 .bg-gradient-primary {
     background: linear-gradient(180deg, #06a07f 10%, #0f0f0f 100%) !important;
 }
 
-/* ── Topbar ──────────────────────────────────────────────── */
+/* ── Topbar y Títulos ────────────────────────────────────── */
+.topbar {
+    border-bottom: 2px solid #06a07f; /* Línea sutil de acento */
+}
+
 .topbar .navbar-brand {
-    font-size: 1rem;
-    letter-spacing: 0.02em;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    color: #06a07f !important;
 }
 
 /* ── Cards ───────────────────────────────────────────────── */
-.card-header {
-    background-color: #f8f9fc;
-    border-bottom: 1px solid #e3e6f0;
+.card {
+    border: none;
+    border-radius: 0.75rem;
 }
 
-/* ── Tabla ───────────────────────────────────────────────── */
-#tablaDistritos thead,
-#tablaVendedores thead {
-    background-color: #0e0e0f;
-    color: #fff;
+.card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eef2f7;
+    padding: 1rem 1.25rem;
+}
+
+.card-header h6 {
+    color: #06a07f !important; /* Títulos en verde SENATI */
+}
+
+/* ── Tabla Estilizada ────────────────────────────────────── */
+#tablaDistritos, #tablaVendedores {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#tablaDistritos thead th,
+#tablaVendedores thead th {
+    background-color: #1a1a1a; /* Negro elegante */
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 12px;
+    border: none;
+}
+
+#tablaDistritos tbody tr,
+#tablaVendedores tbody tr {
+    transition: all 0.2s;
 }
 
 #tablaDistritos tbody tr:hover,
 #tablaVendedores tbody tr:hover {
-    background-color: #eaf0ff;
-    cursor: default;
+    background-color: #f0fdf4 !important; /* Verde muy pálido al pasar el mouse */
+    transform: scale(1.002);
 }
 
-/* ── Badges ──────────────────────────────────────────────── */
+/* ── Botones y Badges ────────────────────────────────────── */
+.btn-primary {
+    background-color: #06a07f;
+    border-color: #06a07f;
+}
+
+.btn-primary:hover {
+    background-color: #047a61;
+    border-color: #047a61;
+}
+
+.badge-primary {
+    background-color: #06a07f;
+}
+
 .badge-pill {
-    font-size: 0.8rem;
-    padding: 0.35em 0.7em;
-}
-
-/* ── DataTables: ajuste de controles ─────────────────────── */
-.dataTables_wrapper .dataTables_filter input {
-    border: 1px solid #d1d3e2;
-    border-radius: 0.35rem;
-    padding: 0.35rem 0.75rem;
     font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5em 0.9em;
 }
 
+/* ── DataTables: controles modernos ─────────────────────── */
+.dataTables_wrapper .dataTables_filter input,
 .dataTables_wrapper .dataTables_length select {
     border: 1px solid #d1d3e2;
-    border-radius: 0.35rem;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.85rem;
+    border-radius: 20px; /* Bordes redondeados modernos */
+    padding: 0.25rem 1rem;
+    outline: none;
 }
 
-/* ── Spinner centrado ─────────────────────────────────────── */
-#spinner {
-    min-height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.dataTables_wrapper .dataTables_filter input:focus {
+    border-color: #06a07f;
+    box-shadow: 0 0 0 0.2rem rgba(6, 160, 127, 0.25);
+}
+
+/* ── Modales ─────────────────────────────────────────────── */
+.modal-content {
+    border: none;
+    border-radius: 1rem;
+}
+
+.modal-header {
+    background-color: #06a07f;
+    color: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.modal-header .close {
+    color: white;
+}
+
+/* ── Spinner ─────────────────────────────────────────────── */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #06a07f !important;
 }
 
 /* ── Footer ──────────────────────────────────────────────── */
 .sticky-footer {
+    background: #ffffff !important;
     border-top: 1px solid #e3e6f0;
-    font-size: 0.85rem;
-    color: #858796;
 }
