@@ -1,0 +1,75 @@
+/* ============================================================
+   style.css  –  Estilos personalizados del sistema
+   ============================================================ */
+
+/* ── Fuente base ────────────────────────────────────────── */
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* ── Sidebar: color de acento SENATI ─────────────────────── */
+.bg-gradient-primary {
+    background: linear-gradient(180deg, #06a07f 10%, #0f0f0f 100%) !important;
+}
+
+/* ── Topbar ──────────────────────────────────────────────── */
+.topbar .navbar-brand {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+
+/* ── Cards ───────────────────────────────────────────────── */
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+/* ── Tabla ───────────────────────────────────────────────── */
+#tablaDistritos thead,
+#tablaVendedores thead {
+    background-color: #0e0e0f;
+    color: #fff;
+}
+
+#tablaDistritos tbody tr:hover,
+#tablaVendedores tbody tr:hover {
+    background-color: #eaf0ff;
+    cursor: default;
+}
+
+/* ── Badges ──────────────────────────────────────────────── */
+.badge-pill {
+    font-size: 0.8rem;
+    padding: 0.35em 0.7em;
+}
+
+/* ── DataTables: ajuste de controles ─────────────────────── */
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #d1d3e2;
+    border-radius: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #d1d3e2;
+    border-radius: 0.35rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* ── Spinner centrado ─────────────────────────────────────── */
+#spinner {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.sticky-footer {
+    border-top: 1px solid #e3e6f0;
+    font-size: 0.85rem;
+    color: #858796;
+}
